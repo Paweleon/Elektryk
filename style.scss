@@ -193,21 +193,30 @@ footer {
     margin: 20px;
   }
 
-  .rekomendacje {
-    grid-column: 5 / 10;
-    grid-row: 13 / 15;
-  }
+  
   .cygan {
     font-weight: bolder;
   }
+
 h3 {
   @include font;
   font-size: 40px;
 
 }
 
-.towns {
+.Section__area {
+    grid-column: 2 / 10;
+    grid-row: 13 / 15;
+    display: flex;
+  }
+.area{
+
+ flex-direction: column;
+}
+
+.area__towns {
   @include font;
   transform: rotate(45deg);
-
+  font-size: 25px;
+  
 }

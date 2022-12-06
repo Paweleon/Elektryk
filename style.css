@@ -1,32 +1,47 @@
 @charset "UTF-8";
+@media screen and (max-width: 360px) {
+  main {
+    grid-template-columns: repeat(10, 10px); }
+  .navigation {
+    flex-direction: column; } }
+
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 10px; }
 
 *,
 *:after,
 *::before {
   box-sizing: inherit; }
 
+body {
+  background-size: 100%;
+  background-color: gray;
+  margin: 1px; }
+
 main {
   display: grid;
-  grid-template-columns: repeat(9, 10vw);
-  grid-template-rows: repeat(15, 10vh);
-  background-color: gray; }
+  grid-template-columns: repeat(9, 20vh);
+  grid-template-rows: repeat(15, 10vh); }
 
 header {
   grid-column: 1 / 11;
-  grid-row: 1 / 8; }
+  grid-row: 1 / 9; }
+
+.mainheader {
+  text-align: center;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 3rem; }
 
 h3 {
   font-family: 'Black Ops One', sans-serif;
-  font-size: 40px; }
+  font-size: 4rem; }
 
 /*MENU*/
 .el {
   color: yellow;
-  font-size: 50px;
-  margin-top: 50px;
-  margin-left: 30px;
+  font-size: 5rem;
+  margin: 4rem;
   font-family: 'Black Ops One', sans-serif; }
 
 .navigation {
@@ -37,25 +52,28 @@ h3 {
   font-family: 'Black Ops One', sans-serif; }
   .navigation__menu {
     list-style: none;
-    margin-bottom: 50px; }
+    margin: 4rem; }
   .navigation__menu--li {
     display: inline-block; }
 
 .link {
-  margin-right: 3vh;
-  color: black;
+  margin: 1rem;
   text-decoration: none;
-  font-size: 4vh;
+  font-size: 2.5rem;
   font-weight: bolder;
   color: yellow; }
 
 .link:hover {
-  font-size: 25px; }
+  font-size: 3rem; }
 
 .contact {
   transform: rotate(0deg);
   animation: ani 0.5s ease 1s infinite alternate none;
   margin-right: 10px; }
+
+@keyframes ani {
+  0% {
+    rotate: 35deg; } }
 
 .tel {
   margin-left: 18px; }
@@ -63,12 +81,12 @@ h3 {
 /*KONIEC MENU*/
 /*Baner*/
 .start {
-  margin: 3vh; }
+  margin: 5rem; }
 
 .billboard {
   color: yellow;
   font-weight: bolder;
-  font-size: 7vh;
+  font-size: 5rem;
   font-family: 'Black Ops One', sans-serif;
   transform: perspective(23rem);
   animation: animacja 5s ease 1s infinite alternate none; }
@@ -93,72 +111,69 @@ h3 {
     margin-left: 60%;
     background: #0a0c0a; } }
 
-.mainheader {
-  text-align: center;
-  font-family: 'Black Ops One', sans-serif; }
-
 /*Koniec Baner*/
 /*Strona Główna*/
 .section__main {
-  grid-column: 2 / 10;
-  grid-row: 7 / 10;
+  grid-column: 1 / 11;
+  grid-row: 8 / 10;
   display: flex;
   justify-content: space-between;
-  margin: 30px; }
+  margin: 5rem; }
 
 .paragraph__main {
   text-align: center;
-  font-size: 40px;
+  font-size: 4rem;
   font-family: 'Black Ops One', sans-serif; }
 
 .Section__area {
-  grid-column: 2 / 10;
-  grid-row: 13 / 15;
-  display: flex; }
+  grid-column: 1 / 11;
+  grid-row: 15 / 17;
+  display: flex;
+  margin: 5rem; }
 
 .area {
   flex-direction: column; }
   .area__towns {
     font-family: 'Black Ops One', sans-serif;
     transform: rotate(45deg);
-    font-size: 25px; }
+    font-size: 3rem; }
 
 .uwaga {
   transform: rotate(35deg);
-  margin: 30px; }
+  margin: 5rem; }
 
 .uwaga__one {
-  margin: 30px; }
+  margin: 5rem; }
 
 /*Koniec Strona Główna*/
 /*OFFER*/
 .section__offer {
-  grid-column: 2 / 10;
+  grid-column: 1 / 11;
   grid-row: 8 / 10;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px; }
+  margin: 5rem; }
 
 .li__offer {
   display: inline;
   font-family: 'Black Ops One', sans-serif;
-  font-size: 40px;
+  font-size: 4rem;
   text-decoration: underline; }
 
 /*Koniec OFFER*/
 /*Contact*/
 .section__contact {
-  grid-column: 2 / 10;
+  grid-column: 1 / 11;
   grid-row: 8 / 10;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px; }
+  margin: 5rem; }
 
 .paragraph__contact {
   text-align: center;
-  font-size: 30px;
+  font-size: 3rem;
   font-family: 'Black Ops One', sans-serif; }
 
 /*koniec contact*/
@@ -171,7 +186,8 @@ footer {
 
 .botton {
   font-family: 'Black Ops One', sans-serif;
+  font-size: 2rem;
   color: yellow;
-  margin: 20px; }
+  margin: 5rem; }
 
 /*koniec footer*/

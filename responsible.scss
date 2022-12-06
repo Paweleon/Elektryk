@@ -1,0 +1,11 @@
+@media screen and (max-width: 360px) {
+
+   main {
+    grid-template-columns: repeat(10, 10px);
+   }
+
+   .navigation {
+    flex-direction: column;
+   }
+  }
+      

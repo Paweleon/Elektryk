@@ -1,11 +1,34 @@
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 500px) {
+ 
 
-   main {
-    grid-template-columns: repeat(10, 10px);
-   }
+  html {
+    font-size: 15px !important;} 
 
-   .navigation {
-    flex-direction: column;
-   }
+  .mainheader{
+    font-size: 5rem !important;
+  } 
+
+  main {
+    grid-row: 15/ 35 !important;
+  
   }
-      
+
+  header {
+    grid-row: 1 / 15;
+  }
+
+  .footer {
+    grid-row: 35/ 41;
+  }
+
+  .paragraph__main {
+    font-size: 5rem !important;
+  }
+
+  .main__offer {
+    justify-content: flex-start;
+  }
+
+
+  }
+  

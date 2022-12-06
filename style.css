@@ -1,9 +1,19 @@
 @charset "UTF-8";
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 15px !important; }
+  .mainheader {
+    font-size: 5rem !important; }
   main {
-    grid-template-columns: repeat(10, 10px); }
-  .navigation {
-    flex-direction: column; } }
+    grid-row: 15/ 35 !important; }
+  header {
+    grid-row: 1 / 15; }
+  .footer {
+    grid-row: 35/ 41; }
+  .paragraph__main {
+    font-size: 5rem !important; }
+  .main__offer {
+    justify-content: flex-start; } }
 
 html {
   box-sizing: border-box;
@@ -17,17 +27,20 @@ html {
 body {
   display: grid;
   grid-template-columns: repeat(12, 20vh);
-  grid-template-rows: repeat(20, 10vh);
+  grid-template-rows: repeat(40, 10vh);
   background-color: gray;
   margin: 1px; }
 
 header {
   grid-column: 1 / 12;
-  grid-row: 1 / 9; }
+  grid-row: 1 / 8; }
 
 main {
   grid-column: 1 / 12;
-  grid-row: 9 / 18; }
+  grid-row: 8 / 17;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
 
 .mainheader {
   text-align: center;
@@ -38,10 +51,15 @@ h3 {
   font-family: 'Black Ops One', sans-serif;
   font-size: 4rem; }
 
+.warning {
+  font-family: 'Black Ops One', sans-serif;
+  text-align: center;
+  font-size: 3rem; }
+
 /*MENU*/
 .el {
   color: yellow;
-  font-size: 5rem;
+  font-size: 6rem;
   margin: 4rem;
   font-family: 'Black Ops One', sans-serif; }
 
@@ -81,7 +99,7 @@ h3 {
 /*KONIEC MENU*/
 /*Baner*/
 .start {
-  margin: 5rem; }
+  margin: 3rem; }
 
 .billboard {
   color: yellow;
@@ -116,11 +134,11 @@ h3 {
 .section__main {
   display: flex;
   justify-content: space-between;
-  margin: 5rem; }
+  margin: 3rem; }
 
 .paragraph__main {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: 'Black Ops One', sans-serif; }
 
 .Section__area {
@@ -128,7 +146,7 @@ h3 {
   margin: 5rem; }
 
 .area {
-  flex-direction: column; }
+  flex-direction: row; }
   .area__towns {
     font-family: 'Black Ops One', sans-serif;
     transform: rotate(45deg);
@@ -174,7 +192,7 @@ h3 {
 /*footer*/
 footer {
   grid-column: 1 / 12;
-  grid-row: 18 / 21;
+  grid-row: 17 / 21;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

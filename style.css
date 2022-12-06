@@ -15,18 +15,19 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-size: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 20vh);
+  grid-template-rows: repeat(20, 10vh);
   background-color: gray;
   margin: 1px; }
 
-main {
-  display: grid;
-  grid-template-columns: repeat(9, 20vh);
-  grid-template-rows: repeat(15, 10vh); }
-
 header {
-  grid-column: 1 / 11;
+  grid-column: 1 / 12;
   grid-row: 1 / 9; }
+
+main {
+  grid-column: 1 / 12;
+  grid-row: 9 / 18; }
 
 .mainheader {
   text-align: center;
@@ -68,15 +69,14 @@ h3 {
 
 .contact {
   transform: rotate(0deg);
-  animation: ani 0.5s ease 1s infinite alternate none;
-  margin-right: 10px; }
+  animation: ani 0.5s ease 1s infinite alternate none; }
 
 @keyframes ani {
   0% {
     rotate: 35deg; } }
 
 .tel {
-  margin-left: 18px; }
+  margin-left: 3rem; }
 
 /*KONIEC MENU*/
 /*Baner*/
@@ -114,8 +114,6 @@ h3 {
 /*Koniec Baner*/
 /*Strona Główna*/
 .section__main {
-  grid-column: 1 / 11;
-  grid-row: 8 / 10;
   display: flex;
   justify-content: space-between;
   margin: 5rem; }
@@ -126,8 +124,6 @@ h3 {
   font-family: 'Black Ops One', sans-serif; }
 
 .Section__area {
-  grid-column: 1 / 11;
-  grid-row: 15 / 17;
   display: flex;
   margin: 5rem; }
 
@@ -148,8 +144,6 @@ h3 {
 /*Koniec Strona Główna*/
 /*OFFER*/
 .section__offer {
-  grid-column: 1 / 11;
-  grid-row: 8 / 10;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,7 +158,7 @@ h3 {
 /*Koniec OFFER*/
 /*Contact*/
 .section__contact {
-  grid-column: 1 / 11;
+  grid-column: 1 / 12;
   grid-row: 8 / 10;
   display: flex;
   flex-direction: column;
@@ -179,6 +173,8 @@ h3 {
 /*koniec contact*/
 /*footer*/
 footer {
+  grid-column: 1 / 12;
+  grid-row: 18 / 21;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

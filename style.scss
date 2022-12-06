@@ -12,21 +12,24 @@ html {
 }
 
 body {
-  background-size: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 20vh);
+  grid-template-rows: repeat(20, 10vh);
   background-color: gray; 
   margin: 1px;
 }
 
-  main {  
-  display: grid;
-  grid-template-columns: repeat(9, 20vh);
-  grid-template-rows: repeat(15, 10vh);
-  }
 
   header {  
-    grid-column: 1 / 11;
+    grid-column: 1 / 12;
     grid-row:  1 / 9;
   }
+
+  main {  
+   grid-column: 1 / 12;
+   grid-row: 9 / 18;
+  }
+
   @mixin font {
     font-family: 'Black Ops One', sans-serif; 
   }
@@ -83,7 +86,6 @@ body {
 .contact {
   transform: rotate(0deg);
   animation: ani 0.5s ease 1s infinite alternate none;
-  margin-right: 10px;
 }
 
 @keyframes ani {
@@ -91,7 +93,7 @@ body {
     rotate: 35deg; } }
 
 .tel {
-  margin-left: 18px;
+  margin-left: 3rem;
 }
 
 /*KONIEC MENU*/
@@ -127,9 +129,6 @@ body {
 /*Strona Główna*/
 
 .section__main {
-
-  grid-column: 1 / 11;
-  grid-row: 8 / 10 ;
   display: flex;
   justify-content: space-between;
   margin: 5rem;
@@ -142,11 +141,8 @@ body {
 }
 
 .Section__area {
-  grid-column: 1 / 11;
-  grid-row: 15 / 17;
   display: flex;
-  margin: 5rem;
-  
+  margin: 5rem; 
 }
 .area{
 flex-direction: column;
@@ -171,8 +167,6 @@ font-size: 3rem;
 /*OFFER*/
 
 .section__offer {
-  grid-column: 1 / 11;
-  grid-row: 8 / 10 ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,7 +185,7 @@ font-size: 3rem;
 /*Contact*/
 
 .section__contact {
-  grid-column: 1 / 11;
+  grid-column: 1 / 12;
   grid-row: 8 / 10 ;
   display: flex;
   flex-direction: column;
@@ -210,6 +204,8 @@ font-size: 3rem;
 /*footer*/
 
 footer {
+  grid-column: 1 / 12;
+  grid-row: 18 / 21;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

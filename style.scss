@@ -1,3 +1,5 @@
+@import "responsible.scss";
+
 html {
     box-sizing: border-box;
   }
@@ -7,12 +9,7 @@ html {
     box-sizing: inherit;
   }
 
-  @mixin font {
-    font-family: 'Black Ops One', sans-serif;
-    
-  }
-  main { 
-     
+  main {   
   display: grid;
   grid-template-columns: repeat(9, 10vw);
   grid-template-rows: repeat(15, 10vh);
@@ -21,14 +18,28 @@ html {
 
   header {
     grid-column: 1 / 11;
-    grid-row:  1 / 7;
+    grid-row:  1 / 8;
   }
-
-  .mainheader {
-    text-align: center;
+  @mixin font {
+    font-family: 'Black Ops One', sans-serif; 
+  }
+  
+  h3 {
     @include font;
-
+    font-size: 40px;
   }
+
+
+
+/*MENU*/
+
+.el {
+  color: yellow;
+  font-size: 50px;
+  margin-top: 50px;
+  margin-left: 30px;
+  @include font;
+}
 
   .navigation {
     display: flex;
@@ -36,57 +47,56 @@ html {
     justify-content: space-between;  
     background-color: black;
     @include font;
-    
-  }
- 
-
-  .navigation__menu {
-    list-style: none;
-    margin-bottom: 50px;
-   
-  }
-
-  li { 
-
+    &__menu {
+      list-style: none;
+    margin-bottom: 50px;}
+    &__menu--li{
     display: inline-block;
-    
-}
-.li__offer{
-  display: inline;
-  @include font;
-  font-size: 40px;
-  text-decoration:underline;
-}
+    }
+  }
 
 .link {
-
     margin-right: 3vh;
     color: black;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 4vh;
     font-weight: bolder;
     color: yellow;
-    
+} 
 
-}
-
-.link:hover {
-   
+.link:hover { 
     font-size: 25px;
 }
 
-.name {
+.contact {
+  transform: rotate(0deg);
+  animation: ani 0.5s ease 1s infinite alternate none;
+  margin-right: 10px;
+ 
+}
+
+.tel {
+  margin-left: 18px;
+}
+
+/*KONIEC MENU*/
+
+/*Baner*/
+
+.start {
+  margin: 3vh;
+
+}
+
+.billboard {
     color: yellow;
     font-weight: bolder;
-    font-size: 40px;
+    font-size: 7vh;
     @include font;
     transform: perspective(23rem);
     animation: animacja 5s ease 1s infinite alternate none;
 }
-h1 {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
+
 .name:hover { animation-play-state:paused; }
 
 @keyframes animacja
@@ -98,38 +108,84 @@ h1 {
 100% { margin-left: 60%; background: rgb(10, 12, 10) }
 }
 
-.section {
+.mainheader {
+  text-align: center;
+  @include font;
+}
+
+/*Koniec Baner*/
+
+/*Strona Główna*/
+
+.section__main {
+
   grid-column: 2 / 10;
   grid-row: 7 / 10 ;
   display: flex;
   justify-content: space-between;
   margin: 30px;
- 
 }
 
-.section__contact {
-  grid-column: 2 / 10;
-  grid-row: 7 / 10 ;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 30px;
-  
-}
-
-.section__offer {
-  grid-column: 2 / 10;
-  grid-row: 7 / 10 ;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 30px;
-}
-
-.paragraph {
+.paragraph__main {
   text-align: center;
   font-size: 40px;
   @include font;
+}
+
+.Section__area {
+  grid-column: 2 / 10;
+  grid-row: 13 / 15;
+  display: flex;
+}
+.area{
+flex-direction: column;
+&__towns {
+  @include font;
+transform: rotate(45deg);
+font-size: 25px;
+}
+}
+
+.uwaga {
+  transform: rotate(35deg);
+  margin:30px;
+}
+
+.uwaga__one {
+  margin:30px;
+}
+
+/*Koniec Strona Główna*/
+ 
+/*OFFER*/
+
+.section__offer {
+  grid-column: 2 / 10;
+  grid-row: 8 / 10 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+}
+
+.li__offer{
+  display: inline;
+  @include font;
+  font-size: 40px;
+  text-decoration:underline;
+}
+
+/*Koniec OFFER*/
+
+/*Contact*/
+
+.section__contact {
+  grid-column: 2 / 10;
+  grid-row: 8 / 10 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px; 
 }
 
 .paragraph__contact {
@@ -138,85 +194,20 @@ h1 {
   @include font;
 }
 
-.uwaga {
-  transform: rotate(35deg);
-  margin:30px;
-}
+/*koniec contact*/
 
-@keyframes ani {
-
-
-0% {rotate: 35deg}
-}
-
-.contact {
-  transform: rotate(0deg);
-  animation: ani 0.5s ease 1s infinite alternate none;
-  margin-right: 10px;
- 
-}
-.tel {
-  margin-left: 18px;
-}
-
-.uwaga__one {
-  margin:30px;
-}
-
-.el {
-  color: yellow;
-  font-size: 50px;
-  margin-top: 50px;
-  margin-left: 30px;
-  @include font;
-}
-.el__bottom {
-  color: yellow;
-  font-size: 50px;
-  margin-top: 50px;
-  margin-left: 30px;
-  margin-bottom: 30px;
-  @include font;
-}
+/*footer*/
 
 footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: black;
-  
+  background-color: black; 
 }
 
-  .botton {
-    @include font;
+.botton {
+   @include font;
     color: yellow;
     margin: 20px;
   }
-
-  
-  .cygan {
-    font-weight: bolder;
-  }
-
-h3 {
-  @include font;
-  font-size: 40px;
-
-}
-
-.Section__area {
-    grid-column: 2 / 10;
-    grid-row: 13 / 15;
-    display: flex;
-  }
-.area{
-
- flex-direction: column;
-}
-
-.area__towns {
-  @include font;
-  transform: rotate(45deg);
-  font-size: 25px;
-  
-}
+/*koniec footer*/
